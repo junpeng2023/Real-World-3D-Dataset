@@ -1,9 +1,11 @@
-## A Real word 3D Dataset for Human-Robot Interaction 
+
+
+## A Real world 3D Dataset for Human-Robot Interaction 
 
 
 ## Description
-This Dataset is a collection of 120 RGB-D videos, the 120 videos consist of 10 different scenarios, namely ”working”, ”flower”, ”coffee” and so on. All of which are designed to simulate the elderly's daily life under laboratory condition. Each scene has three modes:
-”single person”, ”multi person” and ”cooperation”. There are five completely random action sequence videos in each mode. Compare to other existing state-of-the-art datasets, for the same scenario, we recorded not only the actions of a single person, but also recorded the collaboration between the two people, in order to improve the performance of humanoid robots.
+This dataset is a collection of 120 RGB-D videos, The 120 videos consist of 10 different scenarios,namely ”working”, ”flower”, ”coffee” and so on. all of which are designed to simulate the elderly's daily life under laboratory condition.T Each scene has three modes:
+”single person”, ”multi person” and ”cooperation”. There are five completely random action sequence videos in each mode.Compare to other existing state-of-the-art datasets,for the same scenario, We recorded not only the actions of a single person, but, also recorded the collaboration between the two people,in order to improve the performance of humanoid robots.
 
 
 
@@ -13,7 +15,7 @@ Some facts about the Dataset.
 <table>
 	<tr>
 	    <td >Subjects</td>
-	    <td >8 subjects (2 female, 6 male; 7 right-handed, 1 left-handed)</td>
+	    <td >8 subjects (2 female,6 male; 7 right-handed, 1 left-handed)</td>
 	</tr>
 	<tr>
 	    <td >Senarios</td>
@@ -21,7 +23,7 @@ Some facts about the Dataset.
 	</tr>
 	<tr>
 	    <td >Recordings</td>
-	    <td >120 RGB-D videos(we record 3 groups (with 5 repetitions) videos for each senario)</td>
+	    <td >120 RGB-D videos(we record 3 groups(with 5 repetitions) videos for each senario)</td>
 	</tr>
     <tr>
 	    <td >Playtime</td>
@@ -68,7 +70,7 @@ Refer to the following table for a mapping of action label IDs and their symboli
 	<tr>
         <td>1</td>
 	    <td>approach</td>
-	    <td>The human approaches an object which is going to be relevant.</td>
+	    <td>The human approaches an object wgich is going to be relevant.</td>
 	</tr>
 	<tr>
 	    <td >2</td>
@@ -224,7 +226,7 @@ following data format is used in Action ground truth:
 ```
 ## RGB-D Camera Setup
 
-We use Intel RealSense Depth Camera D435i as RGB-D camera to record data. The Intel® RealSense™ D435i places an IMU into our cutting‑edge stereo depth camera. With an Intel module and vision processor in a small form factor, the D435i is a powerful complete package which can be paired with customizable software for a depth camera that is capable of understanding it's own movement.
+We use Intel RealSense Depth Camera D435i as RGB-D camera to record data.The Intel® RealSense™ D435i places an IMU into our cutting‑edge stereo depth camera. With an Intel module and vision processor in a small form factor, the D435i is a powerful  complete package which can be paired with customizable software for a depth camera that is capable of understanding it's own movement.
 
 ## Guidline to Data recording
 
