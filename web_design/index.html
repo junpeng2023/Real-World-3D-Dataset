@@ -5,10 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit= no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css",integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <title>Dataset topic</title>
+	<style>
+        pre {
+            background-color: #d7d8d8d8;   
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            padding: 16px;
+            font-size: 85%;
+            line-height: 1.45;
+            overflow: auto;
+            display: block;
+            width: 100%;
+            white-space: pre;
+            border: 1px solid #e1e4e8;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container mt-3 mb-2">
+   
+    <!-- <div class="container mt-3 mb-2">
         <img src="/static/home/logo.png" alt="">
     </div>
     <header class="site-header">
@@ -70,8 +86,8 @@
                         </li>
                         <a class="nav-item nav-link" href="/contact/">Contact</a>
                     </div>
-                    <!-- Navbar Right Side -->
-                    <div class="navbar-nav">
+                    Navbar Right Side -->
+                    <!-- <div class="navbar-nav">
                         
                         <a class="nav-item nav-link" href="/login/">Login/Signup</a>
                         
@@ -79,18 +95,103 @@
                 </div>
             </div>
         </nav>
-    </header>
-    <div class="media-body">
-        <div class="article-content"><h2>Real World 3D Dataset for Human-Robot Interaction </h2>
+    </header> -->
 
-<h2><span style="font-size:11pt"><span style="font-family:&quot;Calibri&quot;,sans-serif"><strong><span style="font-size:12.0pt">(</span></strong><span style="font-size:12.0pt">also include </span><strong><span style="font-size:12.0pt">AUTH UAV Gesture Dataset: NTU 4-Class)</span></strong></span></span></h2>
+<table border="0" width="500px" align="center">
+	<tbody>
+	<tr>
+		<td> 
+		<center>
+   
+			<h1>
+			<font face="helvetica" style="font-size:87%">
+				Real World 3D Dataset for Human-Robot Interaction 
+			</font>
+			</h1>
+		</center>
+		 <!-- <div class="media-body">
+        <div class="article-content"><h2>Real World 3D Dataset for Human-Robot Interaction </h2> -->
+<!-- <h2><span style="font-size:11pt"><span style="font-family:&quot;Calibri&quot;,sans-serif"><strong><span style="font-size:12.0pt">(</span></strong><span style="font-size:12.0pt">also include </span><strong><span style="font-size:12.0pt">AUTH UAV Gesture Dataset: NTU 4-Class)</span></strong></span></span></h2> -->
 
+   <br>
+   <h2>1. Introduction</h2>
+   <hr style="margin-top:-10px; margin-bottom:13px">
 <p>This dataset is a collection of 120 RGB-D videos.<br>
     The 120 videos consist of 10 different scenarios, namely ”working”, ”flower”, ”coffee” and so on. All of which are designed to simulate the elderly's daily life under laboratory condition. <br>
      Each scene has three modes: ”single person”, ”multi person” and ”cooperation”. <br>
-     There are five completely random action sequence videos in each mode. Compare to other existing state-of-the-art datasets,for the same scenario, we recorded not only the actions of a single person, but also recorded the collaboration between the two people, in order to improve the performance of humanoid robots.
-    </p>
+     There are five completely random action sequence videos in each mode. <br>Compare to other existing state-of-the-art datasets,for the same scenario, we recorded not only the actions of a single person, but also recorded the collaboration between the two people, in order to improve the performance of humanoid robots.
+     
+     Our dataset of 120 videos is divided into a training set of 100 videos and a validation set of 20 videos.<br> The training set consists of 100 videos that are used to train our machine learning model.<br> These videos provide the model with different examples and scenarios to learn, enabling it to generalize and make accurate predictions on new data. <br>Various features such as object detection, action recognition, and scene understanding are extracted from the training videos to develop a robust model.
 
+	 The validation set includes 20 videos that are not included in the training set. <br>These videos serve as an unbiased evaluation metric to measure the performance and generalization ability of our trained models. <br>By comparing the model's predictions on the validation set with ground truth, we can determine its accuracy, precision and recall, as well as other performance metrics. This information is critical to understanding the strengths and weaknesses of the model and guiding further improvements.
+
+
+	 In addition, the annotations of the RGB videos are stored in 120 json files, with the same name as the corresponding video.<br> The json file contains the information of bounding boxes of humans and objects, human-object-interactions, interacting objects and verbs.		 
+	 
+    </p>
+	<p>&nbsp;</p>
+	<!-- <ul>
+		<li>Parent Node
+			<ul>
+				<li>Child Node 1</li>
+				<li>Child Node 2
+					<ul>
+						<li>Grandchild Node 1</li>
+						<li>Grandchild Node 2</li>
+					</ul>
+				</li>
+				<li>Child Node 3</li>
+			</ul>
+		</li>
+		<li>Parent Node 2
+			<ul>
+				<li>Child Node 1</li>
+				<li>Child Node 2</li>
+			</ul>
+		</li>
+	</ul> -->
+
+	<!-- <div style="width:75%; margin:auto;" align="left">
+	
+		
+	<pre style="background-color: #d7d8d8d8; padding: 10px;">
+	json file
+		"annotation"
+			"boxes_h":[[140.01024000000004, -0.00035999999994373866, 648.93056, 665.0298]]
+			"boxes_o":[[601.99936, 561.01968, 719.3497600000001, 681.82992]]
+			"hoi":[0]
+			"interact_object":[[0,2]]
+			"objects_bbox_all":[[601.99936, 561.01968, 719.3497600000001, 681.82992], [820.4492799999999, 454.78044, 931.82976, 642.4102800000001],[609.69024, 689.5396800000001, 730.49024, 720.0000000000001],[784.50048, 561.8804399999999, 867.56992, 696.3901199999999],[737.34016, 359.67959999999994, 894.12992, 573.01992], [718.49984, 583.30044, 797.31968, 717.81012],[704.7904, 463.34988, 797.32032, 636.4198799999999],[140.01024000000004, -0.00035999999994373866, 648.93056, 665.0298]]
+			"objects_all_string"
+			"objects_all_num"
+			"verb"
+		</pre>
+		
+	</div> -->
+
+	<div style="width:75%; margin:auto;" align="left">
+	
+		
+		<pre style="background-color: #d7d8d8d8; padding: 10px;">
+		json file
+			"annotation":
+				"boxes_h":
+				"boxes_o":
+				"hoi":
+				"interact_object":
+				"objects_bbox_all":
+				"objects_all_string":
+				"objects_all_num":
+				"verb":
+			</pre>
+			
+		</div>
+	<p>&nbsp;</p>
+
+<div style="width:75%; margin:auto;" align="center">
+	
+	<img alt="" src="/home/ziwei/Downloads/all_demo_1.png" style="width: 1000px; height: auto; margin: auto;" align="center">
+</div>
 <p>&nbsp;</p>
 
 <h3>1. Dataset in number</h3>
@@ -100,7 +201,9 @@
 
 <p>&nbsp;</p>
 
-<p><strong>1.1 Facts about the dataset</strong></p>
+
+<div style="width:75%; margin:auto;">
+    <p><strong>1.1 Facts about the dataset</strong></p>
 
 <table align="center" border="1" style="width:92%">
     <tbody>
@@ -138,11 +241,11 @@
 	    </tr>
     </tbody>
 </table>
+</div>
 
+<div style="clear:both;"></div>
 
-
-<p>&nbsp;</p>
-
+<div  style="width:75%; margin:auto;">
 <p><strong>1.2 Action Label Mapping</strong></p>
 
 <table align="center" border="1" style="width:92%">
@@ -288,13 +391,32 @@
 	</tr>
 </tbody>
 </table>
+</div>
 
+<div style="width:75%; margin:auto;" align="center">
+<p><img alt="" src="/home/ziwei/FP_plus/action_calculation.png" style="float:left; height:auto; width: 800px;"></p>
+</div>
+
+<div style="width:75%; margin:auto;" align="center">
+<p><img alt="" src="/home/ziwei/FP_plus/action_cal_1.png" style="float:none; height:auto; width: 650px;"></p>
+</div>
+<!-- <p><img alt="" src="/home/ziwei/FP_plus/three_modes.png" style="float:none; height:auto; width: 1000px;"></p> -->
+<p>&nbsp;</p>
 
 <p>&nbsp;</p>
 
+<p>&nbsp;</p>
+
+<br>
+
+<br>
+
+<p> whitespace</p>
+
+
 <p><strong>1.3  Object Class Label Mapping</strong></p>
 
-<table align="center" border="1" style="width:92%">
+<table align="center" border="1" style="width:100%">
 	<tbody>
         
 		<tr>
@@ -365,10 +487,9 @@
 		</tr>
 	</tbody>
 </table>
+</div>
 
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
+<div style="clear:both;"></div>
 
 <h3>2. Action Ground Truth</h3>
 
@@ -382,13 +503,13 @@
 
 <p>&nbsp;</p>
 
-<p>*Masked depth maps are the foreground masked version of the depth maps. Masking is done based on the locations of the detected body joints, to remove the background and less important parts of the depth maps and to improve the compression rate.</p>
+<!-- <p>*Masked depth maps are the foreground masked version of the depth maps. Masking is done based on the locations of the detected body joints, to remove the background and less important parts of the depth maps and to improve the compression rate.</p> -->
 
 <p>&nbsp;</p>
 
 <h3>3. RGB-D Camera Setup</h3>
 
-<p>We use Intel RealSense Depth Camera D435i as RGB-D camera to record data.The Intel® RealSense™ D435i places an IMU into our cutting‑edge stereo depth camera. With an Intel module and vision processor in a small form factor, the D435i is a powerful  complete package which can be paired with customizable software for a depth camera that is capable of understanding it's own movement.</p>
+<p>We use Intel RealSense Depth Camera D435i as RGB-D camera to record data.<br>The Intel® RealSense™ D435i places an IMU into our cutting‑edge stereo depth camera. With an Intel module and vision processor in a small form factor, the D435i is a powerful  complete package which can be paired with customizable software for a depth camera that is capable of understanding it's own movement.</p>
 
 <p>&nbsp;</p>
 
@@ -398,9 +519,9 @@
     <code>
     roscore
     
-    roslaunch realsense2_camera rs_camera.launch align_depth:=true depth_width:=640 depth_height:=480 depth_fps:=30 color_width:=640 color_height:=480 color_fps:=30 
+    roslaunch realsense2_camera rs_camera.launch align_depth:=true<br> depth_width:=640 depth_height:=480 depth_fps:=30 color_width:=640 color_height:=480 color_fps:=30 
     
-    rosbag record /camera/accel/imu_info /camera/accel/sample /camera/align_to_color/parameter_descriptions /camera/align_to_color/parameter_updates /camera/aligned_depth_to_color/camera_info /camera/aligned_depth_to_color/image_raw /camera/color/camera_info /camera/color/image_raw/compressed /camera/extrinsics/depth_to_color /camera/extrinsics/depth_to_infra1 /tf /tf_static -o breakfast.bag
+    rosbag record /camera/accel/imu_info /camera/accel/sample /camera/align_to_color/parameter_descriptions <br>/camera/align_to_color/parameter_updates /camera/aligned_depth_to_color/camera_info /camera/aligned_depth_to_color/image_raw<br> /camera/color/camera_info /camera/color/image_raw/compressed /camera/extrinsics/depth_to_color<br> /camera/extrinsics/depth_to_infra1 /tf /tf_static -o breakfast.bag
     </code>
       </pre> 
 
@@ -430,8 +551,7 @@
 
 <p>&nbsp;</p> -->
 
-
-<h3>4. More Information (FAQs and Sample Codes)</h3>
+<h3>5. Statistics</h3>
 
 <!-- <p>We provide more information about the data, answers to FAQs, samples codes to read the data, and the latest published results on our datasets <a href="https://github.com/shahroudy/NTURGB-D" target="_blank">here</a>.</p> -->
 
@@ -439,28 +559,130 @@
 <p>&nbsp;</p>
 
 
+<h3>6. Dataset Size</h3>
 
-<h3>5. Sample Videos</h3>
+<p>To simplify the download process, we list the size of each kind of file, which is shown in the table below</p>
 
-<p><img alt="" src="/media/website/actionRecognition120.jpg" style="float:left; height:551px; width:1061px"></p>
+<table align="center" border="1" style="width:55%">
+	<tbody>
+		<tr>
+			<td><strong>File Types</strong></td>
+			<td><strong>"Real World 3D Dataset"</strong></td>
+			
+		</tr>
+		<tr>
+			<td>120 json files</td>
+			<td>86.49 MB</td>
+			
+		</tr>
+		<tr>
+			<td>rosbag files</td>
+			<td>260.1 GB</td>
+			
+		</tr>
+		<tr>
+			<td>Depth videos</td>
+			<td>111 MB</td>
+			
+		</tr>
+		<tr>
+			<td>RGB videos</td>
+			<td> 2.9 GB</td>
+			
+		</tr>
+		<tr>
+			<td>Yolo outputs</td>
+			<td> 177.8 GB</td>
+			
+		</tr>
+		
+		<tr>
+			<td><strong>Total</strong></td>
+			<td><strong>---</strong></td>
+			
+		</tr>
+	</tbody>
+</table>
+
+<!-- <script>
+	var data = {"annotation": [{"boxes_h": [[140.01024000000004, -0.00035999999994373866, 648., 648.93056, 665.0298]], "boxes_o": [[601.99936, 561.01968, 719.3497600000001, 681.82992]], "hoi": [0], "interact_object": [[0, 2]], "objects_bbox_allox_all": [[601.99936, 561.01968, 719.3497600000001, 681.82992], [820.4492799992799999999, 454.78044, 931.82976, 642.4102800000001], [609.69024, 689.53968000  -0.00035999999994373866, 648.93056, 665.0298]], "objects_all_string": ["cup""cup", "milk", "scoop", "sugar", "kettle", "honey", "coffee", "human1"], "objects_all_num": [2, 3, 5, 6, 7, 8, 4, 0], "verb": [4]}]};
+	
+	function createTree(container, obj) {
+		container.innerHTML = createTreeText(obj, 0);
+	}
+	
+	function createTreeText(obj, nest) {
+		if (typeof obj !== 'object') return obj;
+		
+		var txt = '';
+		var nestStr = '&nbsp;&nbsp;'.repeat(nest * 2);
+		
+		for (var key in obj) {
+			txt += nestStr + key + '<br>';
+			txt += createTreeText(obj[key], nest + 1);
+		}
+		
+		return txt;
+	}
+	
+	createTree(document.getElementById('jsonTree'), data);
+	
+	</script> -->
+	
+
+<p>&nbsp;</p>
+
+<!-- <p>*Masked depth maps are the foreground masked version of the depth maps. Masking is done based on the locations of the detected body joints, to remove the background and less important parts of the depth maps and to improve the compression rate.</p> -->
+
+<p>&nbsp;</p>
+
+
+<div style="clear:both;"></div>
+
+<h3>7. Sample Videos</h3>
+<p>&nbsp;</p>
+
+<p style="text-align:center;">
+    <img alt="" src="/home/ziwei/FP_plus/3_modes_demo.png" style="width: 800px; height: auto; margin: auto;">
+	<figcaption>Figure: The image illustrates the examples of single person, multi-person, and coorperation HOI in computer vision.</figcaption>
+
+</p>
+
 
 <p>&nbsp;</p>
 
 <table align="center">
 	<tbody>
 		<tr>
-			<td><iframe frameborder="0" height="200" src="/media/ziwei/yuankai/RGB_video/col/col_coffee/coffee_two33_2022-10-17-18-26-34_camera_color_image_raw_compressed.mp4" width="320"></iframe>​​</td>
-			<td><iframe frameborder="0" height="200" src="/media/ziwei/yuankai/RGB_video/col/col_makeup/make_up_col_1_2022-11-11-20-39-21_camera_color_image_raw_compressed.mp4" width="320"></iframe></td>
-		
-			<td><iframe frameborder="0" height="200" src="/media/ziwei/yuankai/RGB_video/single/eating/essen_one_2022-10-17-18-55-41_camera_color_image_raw_compressed.mp4" width="320"></iframe></td>
-			<td><iframe frameborder="0" height="200" src="/media/ziwei/yuankai/RGB_video/col/col_bad/col_bad_3_2022-12-23-13-11-41_camera_color_image_raw_compressed.mp4" width="320"></iframe></td>
+			
+			<!-- <td><iframe frameborder="0" height="200" src="/media/ziwei/yuankai/RGB_video/col/col_coffee/coffee_two33_2022-10-17-18-26-34_camera_color_image_raw_compressed.mp4" width="320"></iframe>​​</td> -->
+			<td><iframe frameborder="0" height="200" src="https://www.youtube.com/embed/BpOdzsZ9_us?ref=0&autoplay=1&mute=1&loop=1&playlist=BpOdzsZ9_us&controls=0&showinfo=0" width="320" allow="autoplay"></iframe></td>
+			<td><iframe frameborder="0" height="200" src="https://www.youtube.com/embed/jc4Cb7NvNaI?ref=0&autoplay=1&mute=1&loop=1&playlist=jc4Cb7NvNaI&controls=0&showinfo=0" width="320" allow="autoplay"></iframe></td>
+		    <!-- <td><iframe frameborder="0" height="200" src="/media/ziwei/yuankai/RGB_video/col/col_makeup/make_up_col_1_2022-11-11-20-39-21_camera_color_image_raw_compressed.mp4" width="320"></iframe></td> -->
+			<!-- <td><iframe frameborder="0" height="200" src="/media/ziwei/yuankai/RGB_video/single/eating/essen_one_2022-10-17-18-55-41_camera_color_image_raw_compressed.mp4" width="320"></iframe></td> -->
+			<!-- <td><iframe frameborder="0" height="200" src="/media/ziwei/yuankai/RGB_video/single/eating/essen_one_2022-10-17-18-55-41_camera_color_image_raw_compressed.mp4" width="320"></iframe></td> -->
+			<td><iframe frameborder="0" height="200" src="https://www.youtube.com/embed/d-LnoEUvV00?ref=0&autoplay=1&mute=1&loop=1&playlist=d-LnoEUvV00&controls=0&showinfo=0" width="320" allow="autoplay"></iframe></td>
+			<td><iframe frameborder="0" height="200" src="https://www.youtube.com/embed/EcaB9eEFZYc?ref=0&autoplay=1&mute=1&loop=1&playlist=EcaB9eEFZYc&controls=0&showinfo=0" width="320" allow="autoplay"></iframe></td>
 		</tr>
 		<tr>
-			<td><iframe frameborder="0" height="200" src="/home/ziwei/Videos/cvat_coffee_col_3_1.mp4" width="320"></iframe>​​</td>
-			<td><iframe frameborder="0" height="200" src="/home/ziwei/Videos/cvat_make_up_col_1.mp4" width="320"></iframe></td>
+			
+			<!-- <td><iframe frameborder="0" height="200" src="/media/ziwei/yuankai/RGB_video/col/col_coffee/coffee_two33_2022-10-17-18-26-34_camera_color_image_raw_compressed.mp4" width="320"></iframe>​​</td> -->
+			<td><iframe frameborder="0" height="200" src="https://www.youtube.com/embed/muJDg4ttx0k?ref=0&autoplay=1&mute=1&loop=1&playlist=muJDg4ttx0k&controls=0&showinfo=0" width="320" allow="autoplay"></iframe></td>
+		    <!-- <td><iframe frameborder="0" height="200" src="/media/ziwei/yuankai/RGB_video/col/col_makeup/make_up_col_1_2022-11-11-20-39-21_camera_color_image_raw_compressed.mp4" width="320"></iframe></td> -->
+			<!-- <td><iframe frameborder="0" height="200" src="/media/ziwei/yuankai/RGB_video/single/eating/essen_one_2022-10-17-18-55-41_camera_color_image_raw_compressed.mp4" width="320"></iframe></td> -->
+			<!-- <td><iframe frameborder="0" height="200" src="/media/ziwei/yuankai/RGB_video/single/eating/essen_one_2022-10-17-18-55-41_camera_color_image_raw_compressed.mp4" width="320"></iframe></td> -->
+			<td><iframe frameborder="0" height="200" src="https://www.youtube.com/embed/2-lCD8plQIo?ref=0&autoplay=1&mute=1&loop=1&playlist=2-lCD8plQIo&controls=0&showinfo=0" width="320" allow="autoplay"></iframe></td>
+			<td><iframe frameborder="0" height="200" src="https://www.youtube.com/embed/GrDbe-fCmkM?ref=0&autoplay=1&mute=1&loop=1&playlist=GrDbe-fCmkM&controls=0&showinfo=0" width="320" allow="autoplay"></iframe></td>
+			<td><iframe frameborder="0" height="200" src="https://www.youtube.com/embed/VeN0CdQ_fSM?ref=0&autoplay=1&mute=1&loop=1&playlist=VeN0CdQ_fSM&controls=0&showinfo=0" width="320" allow="autoplay"></iframe></td>
+		</tr>
+
+		<tr>
+			<!-- <td><iframe frameborder="0" height="200" src="/home/ziwei/Videos/cvat_coffee_col_3_1.mp4" width="320"></iframe>​​</td> -->
+			<td><iframe frameborder="0" height="200" src="https://www.youtube.com/embed/wTmtI949Svs?ref=0&autoplay=1&mute=1&loop=1&playlist=wTmtI949Svs&controls=0&showinfo=0" width="320" allow="autoplay"></iframe></td>
+			<td><iframe frameborder="0" height="200" src="https://www.youtube.com/embed/u882dZqjRy8?ref=0&autoplay=1&mute=1&loop=1&playlist=u882dZqjRy8&controls=0&showinfo=0" width="320" allow="autoplay"></iframe></td>
 		
-			<td><iframe frameborder="0" height="200" src="/home/ziwei/Videos/cvat_eat_single_1_1.mp4" width="320"></iframe></td>
-			<td><iframe frameborder="0" height="200" src="/home/ziwei/Videos/probe_bad_col_3_2.mp4 .mp4" width="320"></iframe></td>
+			<td><iframe frameborder="0" height="200" src="https://www.youtube.com/embed/4qYHs27sfdI?ref=0&autoplay=1&mute=1&loop=1&playlist=4qYHs27sfdI&controls=0&showinfo=0" width="320" allow="autoplay"></iframe></td>
+			<td><iframe frameborder="0" height="200" src="https://www.youtube.com/embed/zzSZNyb7Rv4?ref=0&autoplay=1&mute=1&loop=1&playlist=zzSZNyb7Rv4&controls=0&showinfo=0" width="320" allow="autoplay"></iframe></td>
 		</tr>
         
 
@@ -475,9 +697,16 @@
 	</tbody>
 </table>
 
+<h3>8. More Information (FAQs and Sample Codes)</h3>
+
+<!-- <p>We provide more information about the data, answers to FAQs, samples codes to read the data, and the latest published results on our datasets <a href="https://github.com/shahroudy/NTURGB-D" target="_blank">here</a>.</p> -->
+
+<p> If you want more information about the dataset, answers to FAQs and sample codes to read the data, more details can be found <a href=""></a> </p>
+<p>&nbsp;</p>
 
 
-<h3>6. <u>Terms &amp; Conditions of Use</u></h3>
+
+<h3>9. <u>Terms &amp; Conditions of Use</u></h3>
 
 <p>This dataset is only available for academic research, and are free to researchers from educational or research institutes for non-commercial purposes.</p>
 
@@ -486,9 +715,9 @@
 • For the sake of privacy, images of all subjects in any of these datasets are only allowed for the demonstration in academic publications and presentations.<br>
 • All users of this dataset agree to indemnify, defend and hold harmless,  and its officers, employees, and agents, individually and collectively, from any and all losses, expenses, and damages. </p>
 
-<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:red">If interested, researchers can register for an account, submit the request form and accept the Release Agreement. We will validate your request and grant approval&nbsp;for downloading the datasets.The LoginID can be used for both "NTU RGB+D" and "NTU RGB+D 120".</span></span></span></p>
+<!-- <p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:red">If interested, researchers can register for an account, submit the request form and accept the Release Agreement. We will validate your request and grant approval&nbsp;for downloading the datasets.The LoginID can be used for both "NTU RGB+D" and "NTU RGB+D 120".</span></span></span></p> -->
 
-<h3>7. <u>Related Publications</u></h3>
+<!-- <h3>7. <u>Related Publications</u></h3>
 
 <p>All publications using "Real word 3D Dataset for Human-Robot Interaction" or any of the derived datasets(see Section 8) should include the following acknowledgement: "(Portions of) the research in this paper used "Real word 3D Dataset for Human-Robot Interaction" made available by "Chair of Media Technology, Technical University of Munich""<br>
 <br>
@@ -501,7 +730,7 @@
 
 <p>&nbsp;</p>
 
-<p>Some related works:</p>
+<p>Some related works:</p> -->
 
 <!-- <ul>
 	<li>Amir Shahroudy, Tian-Tsong Ng, Qingxiong Yang, Gang Wang, "Multimodal Multipart Learning for Action Recognition in Depth Videos", TPAMI, 2016.</li>
@@ -519,7 +748,7 @@
 
 
 <!--need to work on-->
-<ul>
+<!-- <ul>
     <li>Dohyung Kim, Jinhyeok Jang, Minsu Jang, Jaeyeon Lee,Jaehong Kim, "3D Daily Activity Recognition Dataset for Elderly-care Robots", Journal/Conference, Year.</li>
     <li>H. Kuehne, H. Jhuang, E. Garrote, T. Poggio, T. Serre, "HMDB: A Large Video Database for Human Motion Recognition", Journal/Conference, Year.</li>
     <li>Christian R. G. Dreher, Mirko Wächter, Tamim Asfour, "Learning Object-Action Relations from Bimanual Human Demonstrations", Journal/Conference, Year.</li>
@@ -527,7 +756,7 @@
     <li>Meng-Jiun Chiou, Chun-Yu Liao, Li-Wei Wang, "ST-HOI: A Spatial-Temporal Baseline for Human-Object Interaction Detection in Videos", Journal/Conference, Year.</li>
   </ul>
 
-<h3>8. Derived Works Based on NTU RGB+D Dataset</h3>
+<h3>8. Derived Works Based on Real World 3D Dataset</h3>
 
 <p>Below are some datasets that are derived from, or make partial use of, NTU RGB+D dataset:</p>
 
@@ -557,14 +786,15 @@ Note: Users of these derived works should also cite the papers found here (see S
         </div>
     </div>
 
-    </main>
+    </main> -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-
-
-    
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script> -->
+	</td>
+</tr>
+</tbody>
+</table> 
 
 </body>
 
