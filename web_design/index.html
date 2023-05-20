@@ -97,15 +97,30 @@
         </nav>
     </header> -->
 
-<table border="0" width="500px" align="center">
+	<!-- <div id="page" class="site">
+		<div class="header-wrapper">
+			<div class="header" style="background: rgb(143, 150, 214); padding-top: 102px;">
+													<div class="inner-header-description gridContainer">
+			<div class="row header-description-row">
+		<div class="col-xs col-xs-12">
+			<h1 class="hero-title">
+				AUTH UAV Gesture Dataset        </h1>
+						<p class="header-subtitle">Artificial Intelligence &amp; Information Analysis</p>
+				</div>
+			</div>
+		</div>
+			</div>
+		</div>		 -->
+
+<table border="0" width="350px" align="center">
 	<tbody>
 	<tr>
 		<td> 
 		<center>
    
 			<h1>
-			<font face="helvetica" style="font-size:87%">
-				Real World 3D Dataset for Human-Robot Interaction 
+			<font face="verdana" style="font-size:87%">
+				Real World 3D Dataset for Human-Robot Interaction (HOI-120 Dataset)
 			</font>
 			</h1>
 		</center>
@@ -114,19 +129,23 @@
 <!-- <h2><span style="font-size:11pt"><span style="font-family:&quot;Calibri&quot;,sans-serif"><strong><span style="font-size:12.0pt">(</span></strong><span style="font-size:12.0pt">also include </span><strong><span style="font-size:12.0pt">AUTH UAV Gesture Dataset: NTU 4-Class)</span></strong></span></span></h2> -->
 
    <br>
+  
+<p>&nbsp;</p>
+  <font face="verdana">
    <h2>1. Introduction</h2>
    <hr style="margin-top:-10px; margin-bottom:13px">
-<p>This dataset is a collection of 120 RGB-D videos.<br>
-    The 120 videos consist of 10 different scenarios, namely ”working”, ”flower”, ”coffee” and so on. All of which are designed to simulate the elderly's daily life under laboratory condition. <br>
+   
+<p> This dataset is a collection of 120 RGB-D videos.<br>
+    The 120 videos consist of 8 different scenarios, namely ”working”, ”watering flowers”, ”making coffee”, "cooking", "reading", "eating", "making up" and "cutting fruits". <br> All of which are designed to simulate the elderly's daily life under laboratory condition. <br>
      Each scene has three modes: ”single person”, ”multi person” and ”cooperation”. <br>
      There are five completely random action sequence videos in each mode. <br>Compare to other existing state-of-the-art datasets,for the same scenario, we recorded not only the actions of a single person, but also recorded the collaboration between the two people, in order to improve the performance of humanoid robots.
      
-     Our dataset of 120 videos is divided into a training set of 100 videos and a validation set of 20 videos.<br> The training set consists of 100 videos that are used to train our machine learning model.<br> These videos provide the model with different examples and scenarios to learn, enabling it to generalize and make accurate predictions on new data. <br>Various features such as object detection, action recognition, and scene understanding are extracted from the training videos to develop a robust model.
+     Our dataset of 120 videos is divided into <strong>a training set of 100 videos</strong> and <strong>a validation set of 20 videos </strong>.<br> The training set consists of 100 videos that are used to train our machine learning model.<br> These videos provide the model with different examples and scenarios to learn, enabling it to generalize and make accurate predictions on new data. <br>Various features such as object detection, action recognition, and scene understanding are extracted from the training videos to develop a robust model.
 
 	 The validation set includes 20 videos that are not included in the training set. <br>These videos serve as an unbiased evaluation metric to measure the performance and generalization ability of our trained models. <br>By comparing the model's predictions on the validation set with ground truth, we can determine its accuracy, precision and recall, as well as other performance metrics. This information is critical to understanding the strengths and weaknesses of the model and guiding further improvements.
 
 
-	 In addition, the annotations of the RGB videos are stored in 120 json files, with the same name as the corresponding video.<br> The json file contains the information of bounding boxes of humans and objects, human-object-interactions, interacting objects and verbs.		 
+	 In addition, the annotations of the RGB videos are stored in <strong>120 json files</strong>, with the same name as the corresponding video.<br> The json file contains the information of bounding boxes of humans and objects, human-object-interactions, interacting objects and verbs.		 
 	 
     </p>
 	<p>&nbsp;</p>
@@ -169,41 +188,46 @@
 		
 	</div> -->
 
-	<div style="width:75%; margin:auto;" align="left">
 	
-		
-		<pre style="background-color: #d7d8d8d8; padding: 10px;">
-		json file
-			"annotation":
-				"boxes_h":
-				"boxes_o":
-				"hoi":
-				"interact_object":
-				"objects_bbox_all":
-				"objects_all_string":
-				"objects_all_num":
-				"verb":
-			</pre>
-			
-		</div>
 	<p>&nbsp;</p>
 
 <div style="width:75%; margin:auto;" align="center">
-	
-	<img alt="" src="/home/ziwei/Downloads/all_demo_1.png" style="width: 1000px; height: auto; margin: auto;" align="center">
+	<figure style="text-align:center;">
+	<img alt="" src="/home/ziwei/Downloads/all_demo_1.png" style="width: 800px; height: auto; margin: auto;" align="center">
+	<p>&nbsp;</p>
+	<figcaption>Fig.1. proposed HOI-120 Dataset with annotations</figcaption>
+</figure>
 </div>
 <p>&nbsp;</p>
 
+<div style="width:75%; margin:auto;" align="left">
+	
+		
+	<pre style="background-color: #d7d8d8d8; padding: 10px;">
+	json file
+	├── "annotation":          # annotations
+		├── "boxes_h":            # bounding boxes of humans
+		├── "boxes_o":            # bounding boxes of objects
+		├── "hoi":                # human-object-interactions
+		├── "interact_object":    # interacting objects
+		├── "objects_bbox_all":   # bounding boxes of all objects
+		├── "objects_all_string": # all objects
+		├── "objects_all_num":    # the number of all objects
+		└── "verb":               # action labels
+		</pre>
+		
+	</div>
+
+
 <h3>1. Dataset in number</h3>
 
-<p>The actions in these two datasets are in three major categories: daily actions, mutual actions, and medical conditions, as shown in the tables below.<br>
 <!-- <strong>Note: actions labelled from A1 to A60 are contained in "NTU RGB+D", and actions labelled from A1 to A120 are in "NTU RGB+D 120".</strong></p> -->
 
 <p>&nbsp;</p>
 
 
 <div style="width:75%; margin:auto;">
-    <p><strong>1.1 Facts about the dataset</strong></p>
+    <p><strong>1.1 Some facts about the dataset</strong></p>
 
 <table align="center" border="1" style="width:92%">
     <tbody>
@@ -217,11 +241,19 @@
         </tr>
         <tr>
             <td >Recordings</td>
-            <td >120 RGB-D videos(we record 3 groups(with 5 repetitions) videos for each senario)</td>
+            <td >120 RGB-D videos(3 groups with 5 repetitions for each senario)</td>
         </tr>
         <tr>
             <td >Playtime</td>
-            <td >2 hours and 18 minutes, or 221 000 RGB-D image frames</td>
+            <td >2 hours and 18 minutes, or 221000 RGB-D image frames</td>
+        </tr>
+		<tr>
+            <td >mean frames</td>
+            <td >221000 RGB-D image frames</td>
+        </tr>
+		<tr>
+            <td >max frames</td>
+            <td >771 RGB-D image frames</td>
         </tr>
         <tr>
             <td >Quality</td>
@@ -237,13 +269,14 @@
         </tr>
         <tr>
             <td >Annotations</td>
-            <td >Actions fully labelled for both hands individually; 5413 frames labelled with object bounding boxes</td>
+            <td >Actions and object bounding boxes are fully labeled for each frame</td>
 	    </tr>
     </tbody>
 </table>
 </div>
 
 <div style="clear:both;"></div>
+<p>&nbsp;</p>
 
 <div  style="width:75%; margin:auto;">
 <p><strong>1.2 Action Label Mapping</strong></p>
@@ -393,95 +426,91 @@
 </table>
 </div>
 
-<div style="width:75%; margin:auto;" align="center">
-<p><img alt="" src="/home/ziwei/FP_plus/action_calculation.png" style="float:left; height:auto; width: 800px;"></p>
-</div>
 
-<div style="width:75%; margin:auto;" align="center">
+
+<!-- <div style="width:75%; margin:auto;" align="center">
 <p><img alt="" src="/home/ziwei/FP_plus/action_cal_1.png" style="float:none; height:auto; width: 650px;"></p>
-</div>
+</div> -->
 <!-- <p><img alt="" src="/home/ziwei/FP_plus/three_modes.png" style="float:none; height:auto; width: 1000px;"></p> -->
-<p>&nbsp;</p>
+
+
+
+
+<!-- <p> whitespace</p> -->
+
+
+<div style="clear:both;"></div> 
 
 <p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<br>
-
-<br>
-
-<p> whitespace</p>
-
-
+<div  style="width:75%; margin:auto;">
 <p><strong>1.3  Object Class Label Mapping</strong></p>
 
-<table align="center" border="1" style="width:100%">
+<table align="center" border="1" style="width:92%">
 	<tbody>
         
 		<tr>
-			<td>object 1: human1</td>
-			<td>object 2: human2</td>
-			<td>object 3: cup</td>
-			<td>object 4: milk </td>
+			<td>object 0: human1</td>
+			<td>object 1: human2</td>
+			<td>object 2: cup</td>
+			<td>object 3: milk </td>
 		</tr>
 		<tr>
-			<td>object 5: coffee</td>
-			<td>object 6: scoop</td>
-			<td>object 7: sugar</td>
-			<td>object 8: kettle</td>
+			<td>object 4: coffee</td>
+			<td>object 5: scoop</td>
+			<td>object 6: sugar</td>
+			<td>object 7: kettle</td>
 		</tr>
 		<tr>
-			<td>object 9: honig </td>
-			<td>object 10: bowl</td>
-			<td>object 11: tee bag</td>
-			<td>object 12: cereal</td>
+			<td>object 8: honig </td>
+			<td>object 9: bowl</td>
+			<td>object 10: tee bag</td>
+			<td>object 11: cereal</td>
 		</tr>
 		<tr>
-			<td>object 13: rug </td>
-			<td>object 14: glasses</td>
-			<td>object 15: pencil</td>
-			<td>object 16: notebook</td>
+			<td>object 12: rug </td>
+			<td>object 13: glasses</td>
+			<td>object 14: pencil</td>
+			<td>object 15: notebook</td>
 		</tr>
 		<tr>
-			<td>object 17: newspaper</td>
-			<td>object 18: phone</td>
-			<td>object 19: flower </td>
-			<td>object 20: plants </td>
+			<td>object 16: newspaper</td>
+			<td>object 17: phone</td>
+			<td>object 18: flower </td>
+			<td>object 19: plants </td>
 		</tr>
 		<tr>
-			<td>object 21: container</td>
-			<td>object 22: shears</td>
-			<td>object 23: computer</td>
-			<td>object 24: ipad </td>
+			<td>object 20: container</td>
+			<td>object 21: shears</td>
+			<td>object 22: computer</td>
+			<td>object 23: ipad </td>
 		</tr>
 		<tr>
-			<td>object 25: place mat </td>
-			<td>object 26: bread </td>
-			<td>object 27: plate</td>
-			<td>object 28: knife </td>
+			<td>object 24: place mat </td>
+			<td>object 25: bread </td>
+			<td>object 26: plate</td>
+			<td>object 27: knife </td>
 		</tr>
         <tr>
-			<td>object 29: chopping block </td>
-			<td>object 30: apple   </td>
-			<td>object 31: banana</td>
-			<td>object 32: peeler </td>
+			<td>object 28: chopping block </td>
+			<td>object 29: apple   </td>
+			<td>object 30: banana</td>
+			<td>object 31: peeler </td>
 		</tr>
         <tr>
-			<td>object 33: perfume </td>
-			<td>object 34: mirror </td>
-			<td>object 35: lipstick</td>
-			<td>object 36: cumb  </td>
+			<td>object 32: perfume </td>
+			<td>object 33: mirror </td>
+			<td>object 34: lipstick</td>
+			<td>object 35: cumb  </td>
 		</tr>
         <tr>
-			<td>object 37: hut </td>
-			<td>object 38: cloth </td>
-			<td>object 39: bag</td>
-			<td>object 40: keys </td>
+			<td>object 36: hut </td>
+			<td>object 37: cloth </td>
+			<td>object 38: bag</td>
+			<td>object 39: keys </td>
 		</tr>
         <tr>
-			<td>object 41: toothbrush</td>
-			<td>object 42: toothpaste </td>
+			<td>object 40: toothbrush</td>
+			<td>object 41: toothpaste </td>
 			<td>-</td>
 			<td>-</td>
 		</tr>
@@ -491,29 +520,90 @@
 
 <div style="clear:both;"></div>
 
+
+<p>&nbsp;</p>
 <h3>2. Action Ground Truth</h3>
 
-<p>following data format is used in Action ground truth:<br>
+<div style="clear:both;"></div>
+<p>&nbsp;</p>
+<div style="width:75%; margin:auto;" align="center">
+	<figure style="text-align:center;">
+<img alt="" src="/home/ziwei/FP_plus/action_distribution_1.png" style="float:center; height:auto; width: 500px;">
+<div style="clear:both;"></div>
+<p>&nbsp;</p>
+<figcaption style="text-align:center;">Fig.2 Action Distribution</figcaption>
+</figure>
+</div>
+<!-- <p>following data format is used in Action ground truth:<br>
 
     ```python<br>
-    
-    ```</p>
 
+    
+    ```</p> -->
 
 
 <p>&nbsp;</p>
+    <p>For each video human action grundtruth, we record the start and end frames of each action
+		as follows, and then represent the human action and the object being touched with the
+		corresponding numeric code in the middle bracket. For example, [1,17] means that the
+		person approaches the phone. The action segment[...94,[22,17],263...] means the human is
+		talking on a phone from frame 94 to frame 263.
+		For multiple people mode as well as for cooperative mode. The actions of each person
+		in the scene are labelled in turn in the middle brackets. For example, the action segment
+		[21,17,5,2] means that the first person is playing with his phone while the second person
+		is putting down his glass.</p>
+	<div style="width:75%; margin:auto;" align="left">
+	
+		<figure style="text-align:center;">
+		<pre style="background-color: #d7d8d8d8; padding: 10px;">
+        work_single_2:[0,[0,0],42,[1,22],53,[21,22],189,[2,22],196,[1,14],206,[4,14],210,[1,15],221,[13,15]<br>,262,[15,15],463,[18,15],480,[5,14],507,[2,14],547,[0,0],564]
+		</pre>
+		<figcaption style="text-align:center;">Sample of action grundtruth template for single person mode</figcaption>
+		</figure>
+		</div>
+
+	<div style="width:75%; margin:auto;" align="left">
+	
+		<figure style="text-align:left;">
+		<pre style="background-color: #d7d8d8d8; padding: 10px;">
+        coffee_mp_4:[0,[0,0,0,1],11,[1,2,0,1],37,[1,2,1,2],40,[4,2,1,2]<br>,42,[4,2,4,2],64,[5,2,5,2],66,[5,2,1,5],71,[5,2,4,5],75,[2,2,8,5],83,[1,4,2,2],96,[1,4,1,2],101,[4,4,8,5],123,[6,4,8,5]
+		,135,[6,4,5,5],140,[6,4,2,5],151,[6,4,1,3],161,[6,4,4,3],181,[3,4,4,3]<br>,196,[5,4,5,3],200,[5,4,2,3],211,[5,4,1,4],215,[6,4,1,4]],222,[2,4,4,4],232,[1,7,4,4],236,[1,7,5,4]
+		,261,[4,7,4,4],273,[4,7,6,4],307,[6,7,5,4],334,[6,7,2,4],347,[6,7,1,5]<br>,357,[5,7,4,5],368,[5,7,2,5],378,[2,7,2,5],386,[2,7,1,7],399,[1,6,4,7],413,[1,3,4,7],424,[4,3,6,7]
+		,456,[6,3,6,7],475,[6,3,5,2],503,[5,3,3,7],523,[5,2,5,7],537,[2,3,5,7]<br>,544,[1,2,2,7],557,[4,5,2,7],568,[8,5,4,5],576,[8,5,8,5],615,[8,5,5,5],617,[8,5,2,2],627,[8,5,1,6]
+		,634,[5,5,1,6],641,[2,5,4,6],655,[1,3,4,6],664,[4,3,4,6],679,[4,3,6,6]<br>,685,[5,3,6,6],700,[2,3,6,6],717,[1,2,4,6],721,[1,2,5,6],732,[4,2,5,6],741,[5,2,5,6],747,[5,2,2,6]
+		,758,[2,2,8,5],776,[0,0,8,5],795,[0,0,5,5],810,[0,0,2,5],819,[0,0,1,3]<br>,825,[0,0,3,3],837,[0,0,2,3],843,[0,0,1,3],846,[0,0,4,3],856,[0,0,6,3],881,[0,0,4,3],897,[0,0,5,3]
+		,912,[0,0,2,3],921,[0,0,1,5],928,[0,0,4,5],935,[0,0,8,5],966,[0,0,5,5]<br>,970,[0,0,2,5],992,[0,0,4,2],1006,[0,0,10,2],1025,[0,0,5,2],1052,[0,0,2,2],1062,[0,0,0,1],1085]
+		</pre>
+		<figcaption style="text-align:center;">Sample of action grundtruth template for multi person mode</figcaption>
+		</figure>
+		</div>
+
+	<div style="width:75%; margin:auto;" align="left">
+	
+		<figure style="text-align:left;">
+		<pre style="background-color: #d7d8d8d8; padding: 10px;">
+        work_col_2:[0,[0,0,0,1],24,[1,22,0,1],34,[21,22,0,1],115,[21,22,1,17]<br>,124,[14,22,1,17],145,[14,22,4,17],166,[1,17,5,17],182,[4,17,2,17],200,[4,17,0,1],211,[22,17,0,1],365,[22,17,1,2]
+		,392,[22,17,4,2],412,[5,17,5,2],432,[2,17,5,2],437,[1,2,2,2],463,[4,2,0,1]<br>,490,[10,2,0,1],555,[5,2,0,1],586,[2,2,0,1],603,[0,0,0,1]
+		,613,[0,0,1,2],644,[0,0,3,2],677,[0,0,2,2],697,[0,0,0,1],725]
+		</pre>
+		<figcaption style="text-align:center;">Sample of action grundtruth template for collabration mode</figcaption>
+		</figure>
+		</div>
+
+
+
 
 <!-- <p>*Masked depth maps are the foreground masked version of the depth maps. Masking is done based on the locations of the detected body joints, to remove the background and less important parts of the depth maps and to improve the compression rate.</p> -->
 
 <p>&nbsp;</p>
 
-<h3>3. RGB-D Camera Setup</h3>
+<!-- <h3>3. RGB-D Camera Setup</h3>
 
 <p>We use Intel RealSense Depth Camera D435i as RGB-D camera to record data.<br>The Intel® RealSense™ D435i places an IMU into our cutting‑edge stereo depth camera. With an Intel module and vision processor in a small form factor, the D435i is a powerful  complete package which can be paired with customizable software for a depth camera that is capable of understanding it's own movement.</p>
 
-<p>&nbsp;</p>
+<p>&nbsp;</p> -->
 
-<h3>4. Guidline to Data recording</h3>
+<!-- <h3>4. Guidline to Data recording</h3>
 
 <pre>
     <code>
@@ -525,7 +615,7 @@
     </code>
       </pre> 
 
-<p>&nbsp;</p>
+<p>&nbsp;</p> -->
 
 <p>&nbsp;</p>
 
@@ -551,12 +641,12 @@
 
 <p>&nbsp;</p> -->
 
-<h3>5. Statistics</h3>
+<!-- <h3>5. Statistics</h3> -->
 
 <!-- <p>We provide more information about the data, answers to FAQs, samples codes to read the data, and the latest published results on our datasets <a href="https://github.com/shahroudy/NTURGB-D" target="_blank">here</a>.</p> -->
 
-<p> If you want more information about the dataset, answers to FAQs and sample codes to read the data, more details can be found <a href=""></a> </p>
-<p>&nbsp;</p>
+<!-- <p> If you want more information about the dataset, answers to FAQs and sample codes to read the data, more details can be found <a href=""></a> </p>
+<p>&nbsp;</p> -->
 
 
 <h3>6. Dataset Size</h3>
@@ -582,7 +672,7 @@
 		</tr>
 		<tr>
 			<td>Depth videos</td>
-			<td>111 MB</td>
+			<td> 3.0 GB</td>
 			
 		</tr>
 		<tr>
@@ -595,10 +685,15 @@
 			<td> 177.8 GB</td>
 			
 		</tr>
+		<tr>
+			<td>png files for pictures</td>
+			<td> 5.0 GB</td>
+			
+		</tr> 
 		
 		<tr>
 			<td><strong>Total</strong></td>
-			<td><strong>---</strong></td>
+			<td><strong>448.89 GB</strong></td>
 			
 		</tr>
 	</tbody>
@@ -642,11 +737,11 @@
 <h3>7. Sample Videos</h3>
 <p>&nbsp;</p>
 
-<p style="text-align:center;">
+<figure style="text-align:center;">
     <img alt="" src="/home/ziwei/FP_plus/3_modes_demo.png" style="width: 800px; height: auto; margin: auto;">
 	<figcaption>Figure: The image illustrates the examples of single person, multi-person, and coorperation HOI in computer vision.</figcaption>
-
-</p>
+    
+</figure>
 
 
 <p>&nbsp;</p>
@@ -656,33 +751,33 @@
 		<tr>
 			
 			<!-- <td><iframe frameborder="0" height="200" src="/media/ziwei/yuankai/RGB_video/col/col_coffee/coffee_two33_2022-10-17-18-26-34_camera_color_image_raw_compressed.mp4" width="320"></iframe>​​</td> -->
-			<td><iframe frameborder="0" height="200" src="https://www.youtube.com/embed/BpOdzsZ9_us?ref=0&autoplay=1&mute=1&loop=1&playlist=BpOdzsZ9_us&controls=0&showinfo=0" width="320" allow="autoplay"></iframe></td>
-			<td><iframe frameborder="0" height="200" src="https://www.youtube.com/embed/jc4Cb7NvNaI?ref=0&autoplay=1&mute=1&loop=1&playlist=jc4Cb7NvNaI&controls=0&showinfo=0" width="320" allow="autoplay"></iframe></td>
+			<td><iframe frameborder="0" height="150" src="https://www.youtube.com/embed/BpOdzsZ9_us?ref=0&autoplay=1&mute=1&loop=1&playlist=BpOdzsZ9_us&controls=0&showinfo=0" width="240" allow="autoplay"></iframe></td>
+			<td><iframe frameborder="0" height="150" src="https://www.youtube.com/embed/jc4Cb7NvNaI?ref=0&autoplay=1&mute=1&loop=1&playlist=jc4Cb7NvNaI&controls=0&showinfo=0" width="240" allow="autoplay"></iframe></td>
 		    <!-- <td><iframe frameborder="0" height="200" src="/media/ziwei/yuankai/RGB_video/col/col_makeup/make_up_col_1_2022-11-11-20-39-21_camera_color_image_raw_compressed.mp4" width="320"></iframe></td> -->
 			<!-- <td><iframe frameborder="0" height="200" src="/media/ziwei/yuankai/RGB_video/single/eating/essen_one_2022-10-17-18-55-41_camera_color_image_raw_compressed.mp4" width="320"></iframe></td> -->
 			<!-- <td><iframe frameborder="0" height="200" src="/media/ziwei/yuankai/RGB_video/single/eating/essen_one_2022-10-17-18-55-41_camera_color_image_raw_compressed.mp4" width="320"></iframe></td> -->
-			<td><iframe frameborder="0" height="200" src="https://www.youtube.com/embed/d-LnoEUvV00?ref=0&autoplay=1&mute=1&loop=1&playlist=d-LnoEUvV00&controls=0&showinfo=0" width="320" allow="autoplay"></iframe></td>
-			<td><iframe frameborder="0" height="200" src="https://www.youtube.com/embed/EcaB9eEFZYc?ref=0&autoplay=1&mute=1&loop=1&playlist=EcaB9eEFZYc&controls=0&showinfo=0" width="320" allow="autoplay"></iframe></td>
+			<td><iframe frameborder="0" height="150" src="https://www.youtube.com/embed/d-LnoEUvV00?ref=0&autoplay=1&mute=1&loop=1&playlist=d-LnoEUvV00&controls=0&showinfo=0" width="240" allow="autoplay"></iframe></td>
+			<td><iframe frameborder="0" height="150" src="https://www.youtube.com/embed/4o8N0TbprgE?ref=0&autoplay=1&mute=1&loop=1&playlist=4o8N0TbprgE&controls=0&showinfo=0" width="240" allow="autoplay"></iframe></td>
 		</tr>
 		<tr>
 			
 			<!-- <td><iframe frameborder="0" height="200" src="/media/ziwei/yuankai/RGB_video/col/col_coffee/coffee_two33_2022-10-17-18-26-34_camera_color_image_raw_compressed.mp4" width="320"></iframe>​​</td> -->
-			<td><iframe frameborder="0" height="200" src="https://www.youtube.com/embed/muJDg4ttx0k?ref=0&autoplay=1&mute=1&loop=1&playlist=muJDg4ttx0k&controls=0&showinfo=0" width="320" allow="autoplay"></iframe></td>
+			<td><iframe frameborder="0" height="150" src="https://www.youtube.com/embed/muJDg4ttx0k?ref=0&autoplay=1&mute=1&loop=1&playlist=muJDg4ttx0k&controls=0&showinfo=0" width="240" allow="autoplay"></iframe></td>
 		    <!-- <td><iframe frameborder="0" height="200" src="/media/ziwei/yuankai/RGB_video/col/col_makeup/make_up_col_1_2022-11-11-20-39-21_camera_color_image_raw_compressed.mp4" width="320"></iframe></td> -->
 			<!-- <td><iframe frameborder="0" height="200" src="/media/ziwei/yuankai/RGB_video/single/eating/essen_one_2022-10-17-18-55-41_camera_color_image_raw_compressed.mp4" width="320"></iframe></td> -->
 			<!-- <td><iframe frameborder="0" height="200" src="/media/ziwei/yuankai/RGB_video/single/eating/essen_one_2022-10-17-18-55-41_camera_color_image_raw_compressed.mp4" width="320"></iframe></td> -->
-			<td><iframe frameborder="0" height="200" src="https://www.youtube.com/embed/2-lCD8plQIo?ref=0&autoplay=1&mute=1&loop=1&playlist=2-lCD8plQIo&controls=0&showinfo=0" width="320" allow="autoplay"></iframe></td>
-			<td><iframe frameborder="0" height="200" src="https://www.youtube.com/embed/GrDbe-fCmkM?ref=0&autoplay=1&mute=1&loop=1&playlist=GrDbe-fCmkM&controls=0&showinfo=0" width="320" allow="autoplay"></iframe></td>
-			<td><iframe frameborder="0" height="200" src="https://www.youtube.com/embed/VeN0CdQ_fSM?ref=0&autoplay=1&mute=1&loop=1&playlist=VeN0CdQ_fSM&controls=0&showinfo=0" width="320" allow="autoplay"></iframe></td>
+			<td><iframe frameborder="0" height="150" src="https://www.youtube.com/embed/2-lCD8plQIo?ref=0&autoplay=1&mute=1&loop=1&playlist=2-lCD8plQIo&controls=0&showinfo=0" width="240" allow="autoplay"></iframe></td>
+			<td><iframe frameborder="0" height="150" src="https://www.youtube.com/embed/GrDbe-fCmkM?ref=0&autoplay=1&mute=1&loop=1&playlist=GrDbe-fCmkM&controls=0&showinfo=0" width="240" allow="autoplay"></iframe></td>
+			<td><iframe frameborder="0" height="150" src="https://www.youtube.com/embed/VeN0CdQ_fSM?ref=0&autoplay=1&mute=1&loop=1&playlist=VeN0CdQ_fSM&controls=0&showinfo=0" width="240" allow="autoplay"></iframe></td>
 		</tr>
 
 		<tr>
 			<!-- <td><iframe frameborder="0" height="200" src="/home/ziwei/Videos/cvat_coffee_col_3_1.mp4" width="320"></iframe>​​</td> -->
-			<td><iframe frameborder="0" height="200" src="https://www.youtube.com/embed/wTmtI949Svs?ref=0&autoplay=1&mute=1&loop=1&playlist=wTmtI949Svs&controls=0&showinfo=0" width="320" allow="autoplay"></iframe></td>
-			<td><iframe frameborder="0" height="200" src="https://www.youtube.com/embed/u882dZqjRy8?ref=0&autoplay=1&mute=1&loop=1&playlist=u882dZqjRy8&controls=0&showinfo=0" width="320" allow="autoplay"></iframe></td>
+			<td><iframe frameborder="0" height="150" src="https://www.youtube.com/embed/wTmtI949Svs?ref=0&autoplay=1&mute=1&loop=1&playlist=wTmtI949Svs&controls=0&showinfo=0" width="240" allow="autoplay"></iframe></td>
+			<td><iframe frameborder="0" height="150" src="https://www.youtube.com/embed/u882dZqjRy8?ref=0&autoplay=1&mute=1&loop=1&playlist=u882dZqjRy8&controls=0&showinfo=0" width="240" allow="autoplay"></iframe></td>
 		
-			<td><iframe frameborder="0" height="200" src="https://www.youtube.com/embed/4qYHs27sfdI?ref=0&autoplay=1&mute=1&loop=1&playlist=4qYHs27sfdI&controls=0&showinfo=0" width="320" allow="autoplay"></iframe></td>
-			<td><iframe frameborder="0" height="200" src="https://www.youtube.com/embed/zzSZNyb7Rv4?ref=0&autoplay=1&mute=1&loop=1&playlist=zzSZNyb7Rv4&controls=0&showinfo=0" width="320" allow="autoplay"></iframe></td>
+			<td><iframe frameborder="0" height="150" src="https://www.youtube.com/embed/4qYHs27sfdI?ref=0&autoplay=1&mute=1&loop=1&playlist=4qYHs27sfdI&controls=0&showinfo=0" width="240" allow="autoplay"></iframe></td>
+			<td><iframe frameborder="0" height="150" src="https://www.youtube.com/embed/zzSZNyb7Rv4?ref=0&autoplay=1&mute=1&loop=1&playlist=zzSZNyb7Rv4&controls=0&showinfo=0" width="240" allow="autoplay"></iframe></td>
 		</tr>
         
 
@@ -697,12 +792,21 @@
 	</tbody>
 </table>
 
-<h3>8. More Information (FAQs and Sample Codes)</h3>
+<h3>8. How to download</h3>
 
 <!-- <p>We provide more information about the data, answers to FAQs, samples codes to read the data, and the latest published results on our datasets <a href="https://github.com/shahroudy/NTURGB-D" target="_blank">here</a>.</p> -->
 
 <p> If you want more information about the dataset, answers to FAQs and sample codes to read the data, more details can be found <a href=""></a> </p>
 <p>&nbsp;</p>
+
+<div style="margin-left: 10px; display: inline-block;">
+<a href="https://drive.google.com/open?id=1Qc3SOXdjzVUd1LDuG0ZS7DsE4Kb0FYVr">HICO version 20150920</a> 7.5GB<br>
+Images and annotations for the HOI classification task.
+</div>
+
+
+
+
 
 
 
@@ -796,6 +900,7 @@ Note: Users of these derived works should also cite the papers found here (see S
 </tbody>
 </table> 
 
+</font>
 </body>
 
 </html>
