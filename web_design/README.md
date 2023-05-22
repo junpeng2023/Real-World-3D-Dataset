@@ -5,7 +5,8 @@
 
 ## Description
 This dataset is a collection of 120 RGB-D videos, The 120 videos consist of 10 different scenarios,namely ”working”, ”flower”, ”coffee” and so on. all of which are designed to simulate the elderly's daily life under laboratory condition.T Each scene has three modes:
-”single person”, ”multi person” and ”cooperation”. There are five completely random action sequence videos in each mode.Compare to other existing state-of-the-art datasets,for the same scenario, We recorded not only the actions of a single person, but, also recorded the collaboration between the two people,in order to improve the performance of humanoid robots.
+”single person”, ”multi person” and ”cooperation”. There are five completely random action sequence videos in each mode. Compare to other existing state-of-the-art datasets,for the same scenario, We recorded not only the actions of a single person, but, also recorded the collaboration between the two people,in order to improve the performance of humanoid robots.
+
 
 
 
@@ -218,12 +219,53 @@ Refer to the following table for a mapping of object class label IDs and their s
 
 ## Action Ground Truth
 
+<p>&nbsp;</p>
+    <p>For each video human action grundtruth, we record the start and end frames of each action
+		as follows, and then represent the human action and the object being touched with the
+		corresponding numeric code in the middle bracket. For example, [1,17] means that the
+		person approaches the phone. The action segment[...94,[22,17],263...] means the human is
+		talking on a phone from frame 94 to frame 263.
+		For multiple people mode as well as for cooperative mode. The actions of each person
+		in the scene are labelled in turn in the middle brackets. For example, the action segment
+		[21,17,5,2] means that the first person is playing with his phone while the second person
+		is putting down his glass.</p>
+	<div style="width:75%; margin:auto;" align="left">
+	
+		<figure style="text-align:center;">
+		<pre style="background-color: #d7d8d8d8; padding: 10px;">
+        work_single_2:[0,[0,0],42,[1,22],53,[21,22],189,[2,22],196,[1,14],206,[4,14],210,[1,15],221,[13,15]<br>,262,[15,15],463,[18,15],480,[5,14],507,[2,14],547,[0,0],564]
+		</pre>
+		<figcaption style="text-align:center;">Sample of action grundtruth template for single person mode</figcaption>
+		</figure>
+		</div>
 
-following data format is used in Action ground truth:
+	<div style="width:75%; margin:auto;" align="left">
+	
+		<figure style="text-align:left;">
+		<pre style="background-color: #d7d8d8d8; padding: 10px;">
+        coffee_mp_4:[0,[0,0,0,1],11,[1,2,0,1],37,[1,2,1,2],40,[4,2,1,2]<br>,42,[4,2,4,2],64,[5,2,5,2],66,[5,2,1,5],71,[5,2,4,5],75,[2,2,8,5],83,[1,4,2,2],96,[1,4,1,2],101,[4,4,8,5],123,[6,4,8,5]
+		,135,[6,4,5,5],140,[6,4,2,5],151,[6,4,1,3],161,[6,4,4,3],181,[3,4,4,3]<br>,196,[5,4,5,3],200,[5,4,2,3],211,[5,4,1,4],215,[6,4,1,4]],222,[2,4,4,4],232,[1,7,4,4],236,[1,7,5,4]
+		,261,[4,7,4,4],273,[4,7,6,4],307,[6,7,5,4],334,[6,7,2,4],347,[6,7,1,5]<br>,357,[5,7,4,5],368,[5,7,2,5],378,[2,7,2,5],386,[2,7,1,7],399,[1,6,4,7],413,[1,3,4,7],424,[4,3,6,7]
+		,456,[6,3,6,7],475,[6,3,5,2],503,[5,3,3,7],523,[5,2,5,7],537,[2,3,5,7]<br>,544,[1,2,2,7],557,[4,5,2,7],568,[8,5,4,5],576,[8,5,8,5],615,[8,5,5,5],617,[8,5,2,2],627,[8,5,1,6]
+		,634,[5,5,1,6],641,[2,5,4,6],655,[1,3,4,6],664,[4,3,4,6],679,[4,3,6,6]<br>,685,[5,3,6,6],700,[2,3,6,6],717,[1,2,4,6],721,[1,2,5,6],732,[4,2,5,6],741,[5,2,5,6],747,[5,2,2,6]
+		,758,[2,2,8,5],776,[0,0,8,5],795,[0,0,5,5],810,[0,0,2,5],819,[0,0,1,3]<br>,825,[0,0,3,3],837,[0,0,2,3],843,[0,0,1,3],846,[0,0,4,3],856,[0,0,6,3],881,[0,0,4,3],897,[0,0,5,3]
+		,912,[0,0,2,3],921,[0,0,1,5],928,[0,0,4,5],935,[0,0,8,5],966,[0,0,5,5]<br>,970,[0,0,2,5],992,[0,0,4,2],1006,[0,0,10,2],1025,[0,0,5,2],1052,[0,0,2,2],1062,[0,0,0,1],1085]
+		</pre>
+		<figcaption style="text-align:center;">Sample of action grundtruth template for multi person mode</figcaption>
+		</figure>
+		</div>
 
-```python
-
-```
+	<div style="width:75%; margin:auto;" align="left">
+	
+		<figure style="text-align:left;">
+		<pre style="background-color: #d7d8d8d8; padding: 10px;">
+        work_col_2:[0,[0,0,0,1],24,[1,22,0,1],34,[21,22,0,1],115,[21,22,1,17]<br>,124,[14,22,1,17],145,[14,22,4,17],166,[1,17,5,17],182,[4,17,2,17],200,[4,17,0,1],211,[22,17,0,1],365,[22,17,1,2]
+		,392,[22,17,4,2],412,[5,17,5,2],432,[2,17,5,2],437,[1,2,2,2],463,[4,2,0,1]<br>,490,[10,2,0,1],555,[5,2,0,1],586,[2,2,0,1],603,[0,0,0,1]
+		,613,[0,0,1,2],644,[0,0,3,2],677,[0,0,2,2],697,[0,0,0,1],725]
+		</pre>
+		<figcaption style="text-align:center;">Sample of action grundtruth template for collabration mode</figcaption>
+		</figure>
+		</div>
 ## RGB-D Camera Setup
 
 We use Intel RealSense Depth Camera D435i as RGB-D camera to record data.The Intel® RealSense™ D435i places an IMU into our cutting‑edge stereo depth camera. With an Intel module and vision processor in a small form factor, the D435i is a powerful  complete package which can be paired with customizable software for a depth camera that is capable of understanding it's own movement.
