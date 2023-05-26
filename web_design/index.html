@@ -128,7 +128,7 @@
    
 			<h1>
 			<font face="verdana" style="font-size:87%">
-				Multi-Tasking Daily Living Human-Object Interaction Dataset (MDLHOI dataset)
+				Multi-Tasking Daily Living Human-Object Interaction Dataset (MDLHOI Dataset)
 			</font>
 			</h1>
 		</center>
@@ -148,9 +148,9 @@
      Each scene has three modes: <strong>”single person”, ”multi person” and ”cooperation”</strong>. <br>
      There are five completely random action sequence videos in each mode. <br>Compare to other existing state-of-the-art datasets, for the same scenario, we recorded <strong>not only the actions of a single person, but also recorded the collaboration between the two people</strong>, in order to improve the performance of humanoid robots.
      
-     Our dataset of 120 videos is divided into <strong>a training set of 100 videos</strong> and <strong>a validation set of 20 videos </strong>.<br> The training set consists of 100 videos that are used to train our machine learning model.<br> These videos provide the model with different examples and scenarios to learn, enabling it to generalize and make accurate predictions on new data. <br>Various features such as object detection, action recognition, and scene understanding are extracted from the training videos to develop a robust model.
+     Our dataset of 120 videos is divided into <strong>a training set of 100 videos</strong> and <strong>a validation set of 20 videos </strong>.<br> <strong>The training set consists of 100 videos</strong> that are used to train our machine learning model.<br> These videos provide the model with different examples and scenarios to learn, enabling it to generalize and make accurate predictions on new data. <br>Various features such as object detection, action recognition, and scene understanding are extracted from the training videos to develop a robust model.
 
-	 The validation set includes 20 videos that are not included in the training set. <br>These videos serve as an unbiased evaluation metric to measure the performance and generalization ability of our trained models. <br>By comparing the model's predictions on the validation set with ground truth, we can determine its accuracy, precision and recall, as well as other performance metrics. This information is critical to understanding the strengths and weaknesses of the model and guiding further improvements.
+	 <strong>The validation set includes 20 videos</strong> that are not included in the training set. <br>These videos serve as an unbiased evaluation metric to measure the performance and generalization ability of our trained models. <br>By comparing the model's predictions on the validation set with ground truth, we can determine its accuracy, precision and recall, as well as other performance metrics. This information is critical to understanding the strengths and weaknesses of the model and guiding further improvements.
 
 
 	 In addition, the annotations of the RGB videos are stored in <strong>120 json files</strong>, with the same name as the corresponding video.<br> The json file contains the information of bounding boxes of humans and objects, human-object-interactions, interacting objects and verbs.		 
@@ -247,7 +247,7 @@
         </tr>
         <tr>
             <td >Senarios</td>
-            <td >coffee/breakfast/reading/flower/working/eating/fruit/restroom</td>
+            <td >making coffee/having breakfast/reading/flower gardening/working/eating/preparing fruits/restroom</td>
         </tr>
         <tr>
             <td >Recordings</td>
@@ -275,7 +275,7 @@
         </tr>
         <tr>
             <td >Objects</td>
-            <td >40 commonly used objects in daily life </td>
+            <td >37 commonly used objects in daily life </td>
         </tr>
         <tr>
             <td >Annotations</td>
@@ -558,13 +558,13 @@
 <p>&nbsp;</p>
     <p>For each video human action grundtruth, we record the start and end frames of each action
 		as follows, and then represent the human action and the object being touched with the
-		corresponding numeric code in the middle bracket. For example, [1,17] means that the
-		person approaches the phone. The action segment[...94,[22,17],263...] means the human is
-		talking on a phone from frame 94 to frame 263.
+		corresponding numeric code in the middle bracket. For example, <strong>[22,17]</strong> means that the
+		person <strong> talks on the phone</strong>. The action segment <strong>[...94,[22,17],263...]</strong> means <strong> the human is
+		talking on a phone from frame 94 to frame 263</strong>.
 		For multiple people mode as well as for cooperative mode. The actions of each person
 		in the scene are labelled in turn in the middle brackets. For example, the action segment
-		[21,17,5,2] means that the first person is playing with his phone while the second person
-		is putting down his glass.</p>
+		<strong>[21,17,5,2] means that the first person is playing with his phone while the second person
+		is putting down his glass</strong>.</p>
 	<div style="width:75%; margin:auto;" align="left">
 	
 		<figure style="text-align:center;">
@@ -686,28 +686,28 @@
 		</tr>
 		<tr>
 			<td>Depth videos</td>
-			<td> 3.0 GB</td>
+			<td> 2.3 GB</td>
 			
 		</tr>
 		<tr>
 			<td>RGB videos</td>
-			<td> 2.9 GB</td>
+			<td> 2.4 GB</td>
 			
 		</tr>
 		<tr>
-			<td>Yolo outputs</td>
-			<td> 177.8 GB</td>
+			<td>png files for pictures (YOLO)</td>
+			<td> 94.3 GB</td>
 			
 		</tr>
 		<tr>
-			<td>png files for pictures</td>
-			<td> 5.0 GB</td>
+			<td>txt files for annotations (YOLO) </td>
+			<td> 27.32 MB</td>
 			
 		</tr> 
 		
 		<tr>
 			<td><strong>Total</strong></td>
-			<td><strong>448.89 GB</strong></td>
+			<td><strong>359.21 GB</strong></td>
 			
 		</tr>
 	</tbody>
