@@ -32,7 +32,7 @@ Some facts about the Dataset.
 	</tr>
     <tr>
 	    <td >Quality</td>
-	    <td >640 px × 480 px image resolution; 30 fps</td>
+	    <td >640 px × 480 px image resolution; 25 fps</td>
 	</tr>
     <tr>
 	    <td >Actions</td>
@@ -269,6 +269,8 @@ Refer to the following table for a mapping of object class label IDs and their s
 ## RGB-D Camera Setup
 
 We use Intel RealSense Depth Camera D435i as RGB-D camera to record data.The Intel® RealSense™ D435i places an IMU into our cutting‑edge stereo depth camera. With an Intel module and vision processor in a small form factor, the D435i is a powerful  complete package which can be paired with customizable software for a depth camera that is capable of understanding it's own movement.
+
+
 
 ## Guidline to Data recording
 

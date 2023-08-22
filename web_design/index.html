@@ -143,17 +143,17 @@
    <h2>1. Introduction</h2>
    <hr style="margin-top:-10px; margin-bottom:13px">
    
-<p> This dataset is a collection of 120 RGB-D videos.<br>
-    The 120 videos consist of <strong>8 different scenarios, namely ”making coffee”, ”having breakfast”, ”reading”, "flower gardening", "working", "eating", "preparing fruits" and "restroom routine"</strong>. <br> All of the scenarios are designed to simulate the elderly's daily life under laboratory condition. <br>
+<p> This dataset is a collection of 150 RGB-D videos.<br>
+    The 150 videos consist of <strong>10 different scenarios, namely ”making coffee”, ”having breakfast”, ”reading”, "flower gardening", "working", "eating", "preparing fruits","restroom routine","wearing" and "making up"</strong>. <br> All of the scenarios are designed to simulate the elderly's daily life under laboratory condition. <br>
      Each scene has three modes: <strong>”single person”, ”multi person” and ”cooperation”</strong>. <br>
      There are five completely random action sequence videos in each mode. <br>Compare to other existing state-of-the-art datasets, for the same scenario, we recorded <strong>not only the actions of a single person, but also recorded the collaboration between the two people</strong>, in order to improve the performance of humanoid robots.
      
-     Our dataset of 120 videos is divided into <strong>a training set of 100 videos</strong> and <strong>a validation set of 20 videos </strong>.<br> <strong>The training set consists of 100 videos</strong> that are used to train our machine learning model.<br> These videos provide the model with different examples and scenarios to learn, enabling it to generalize and make accurate predictions on new data. <br>Various features such as object detection, action recognition, and scene understanding are extracted from the training videos to develop a robust model.
+     Our dataset of 150 videos is divided into <strong>a training set of 120 videos</strong> and <strong>a validation set of 30 videos </strong>.<br> <strong>The training set consists of 120 videos</strong> that are used to train our machine learning model.<br> These videos provide the model with different examples and scenarios to learn, enabling it to generalize and make accurate predictions on new data. <br>Various features such as object detection, action recognition, and scene understanding are extracted from the training videos to develop a robust model.
 
-	 <strong>The validation set includes 20 videos</strong> that are not included in the training set. <br>These videos serve as an unbiased evaluation metric to measure the performance and generalization ability of our trained models. <br>By comparing the model's predictions on the validation set with ground truth, we can determine its accuracy, precision and recall, as well as other performance metrics. This information is critical to understanding the strengths and weaknesses of the model and guiding further improvements.
+	 <strong>The validation set includes 30 videos</strong> that are not included in the training set. <br>These videos serve as an unbiased evaluation metric to measure the performance and generalization ability of our trained models. <br>By comparing the model's predictions on the validation set with ground truth, we can determine its accuracy, precision and recall, as well as other performance metrics. This information is critical to understanding the strengths and weaknesses of the model and guiding further improvements.
 
 
-	 In addition, the annotations of the RGB videos are stored in <strong>120 json files</strong>, with the same name as the corresponding video.<br> The json file contains the information of bounding boxes of humans and objects, human-object-interactions, interacting objects and verbs.		 
+	 In addition, the annotations of the RGB videos are stored in <strong>150 json files</strong>, with the same name as the corresponding video.<br> The json file contains the information of bounding boxes of humans and objects, human-object-interactions, interacting objects and verbs.		 
 	 The structure inside a json file is shown below: <br>
 	 
     </p>
@@ -251,11 +251,11 @@
         </tr>
         <tr>
             <td >Recordings</td>
-            <td >120 RGB-D videos(3 groups with 5 repetitions for each senario)</td>
+            <td >150 RGB-D videos(3 groups with 5 repetitions for each senario)</td>
         </tr>
         <tr>
             <td >Playtime</td>
-            <td >1 hour and 1 minute, or 92297 RGB-D image frames</td>
+            <td >1 hour and 1 minute, or 113454 RGB-D image frames</td>
         </tr>
 		<tr>
             <td >mean frames</td>
@@ -723,8 +723,8 @@
 			
 		</tr>
 		<tr>
-			<td>The 120 json files</td>
-			<td>86.49 MB</td>
+			<td>The 150 json files</td>
+			<td>108.8 MB</td>
 			
 		</tr>
 		<tr>
@@ -743,15 +743,29 @@
 			
 		</tr>
 		<tr>
+			<td>depth videos</td>
+			<td> 1.1 GB</td>
+			
+		</tr>
+
+		
+		<tr>
 			<td>png files for pictures (YOLO)</td>
 			<td> 94.3 GB</td>
 			
 		</tr>
+
 		<tr>
 			<td>txt files for annotations (YOLO) </td>
 			<td> 27.32 MB</td>
 			
 		</tr> 
+
+		<tr>
+			<td>png files for depth videos</td>
+			<td> 20 GB</td>
+			
+		</tr>
 		
 		<tr>
 			<td><strong>Total</strong></td>
