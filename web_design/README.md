@@ -16,23 +16,31 @@ Some facts about the Dataset.
 <table>
 	<tr>
 	    <td >Subjects</td>
-	    <td >8 subjects (2 female,6 male; 7 right-handed, 1 left-handed)</td>
+	    <td >8 subjects (2 female, 6 male; 7 right-handed, 1 left-handed)</td>
 	</tr>
 	<tr>
 	    <td >Senarios</td>
-	    <td >coffee/breakfast/reading/flower/working/eating/fruit/make_up/wear/bad</td>
+	    <td >making coffee/having breakfast/reading/flower gardening/working/eating/preparing fruits/restroom routine/wearing/making up</td>
 	</tr>
 	<tr>
 	    <td >Recordings</td>
-	    <td >120 RGB-D videos(we record 3 groups(with 5 repetitions) videos for each senario)</td>
+	    <td >150 RGB-D videos(3 groups with 5 repetitions for each senario)</td>
 	</tr>
     <tr>
 	    <td >Playtime</td>
-	    <td >2 hours and 18 minutes, or 221 000 RGB-D image frames</td>
+	    <td >1 hour and 15 minutes, or 113454 RGB-D image frames</td>
 	</tr>
+	<tr>
+            <td >mean frames</td>
+            <td >756 RGB-D image frames</td>
+        </tr>
+		<tr>
+            <td >max frames</td>
+            <td >1778 RGB-D image frames</td>
+    </tr>
     <tr>
 	    <td >Quality</td>
-	    <td >640 px × 480 px image resolution; 25 fps</td>
+	    <td >1280 px × 720 px image resolution; 25 fps</td>
 	</tr>
     <tr>
 	    <td >Actions</td>
@@ -40,11 +48,11 @@ Some facts about the Dataset.
 	</tr>
      <tr>
 	    <td >Objects</td>
-	    <td >40 commonly used objects in daily life </td>
+	    <td >43 commonly used objects in daily life </td>
 	</tr>
      <tr>
 	    <td >Annotations</td>
-	    <td >Actions fully labelled for both hands individually; 5413 frames labelled with object bounding boxes</td>
+	    <td >Actions and object bounding boxes are fully labeled for each frame</td>
 	</tr>
     
     
