@@ -218,7 +218,7 @@ Refer to the following table for a mapping of object class label IDs and their s
 | 6  | sugar   |17  | phone     |28  | chopping block |39  | keys |
 | 7  | kettle  |18  | flower    |29  | apple          |40  | toothbrush |
 | 8  | honig   |19  | plants    |30  | banana         |41  | toothpaste |
-| 9  | bowl    |20  | container |31  | peeler|        |42  | shaver |
+| 9  | bowl    |20  | container |31  | peeler         |42  | shaver |
 | 10 |tee bag  |21  | shears    |32  | perfume|
 
 
